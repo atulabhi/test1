@@ -1,26 +1,26 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: helloweb
+  name: stage-openebs
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
+    kubernetes.io/ingress.global-static-ip-name: stage-demo-ip
   labels:
-    app: hello
+    app: stage-openebs
 spec:
   backend:
-    serviceName: helloweb-backend
+    serviceName: stage-openebs
     servicePort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloweb-backend
+  name: stage-openebs
   labels:
-    app: hello
+    app: stage-openebs
 spec:
   type: NodePort
   selector:
-    app: hello
+    app: stage-openebs
     tier: web
   ports:
   - port: 8080
