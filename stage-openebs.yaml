@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: stage-openebs
-          image: index.docker.io/avneetsingh/openebs-website:18861a
+          image: avneetsingh/openebs-website:18861a
           imagePullPolicy: Always
           ports:
           - containerPort: 80
