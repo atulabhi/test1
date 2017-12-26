@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: stage-openebs
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: stage-demo-ip
+    kubernetes.io/ingress.global-static-ip-name: stage-demo-amriship
   labels:
     app: stage-openebs
 spec:
